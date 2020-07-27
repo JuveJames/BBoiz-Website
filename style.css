@@ -1,0 +1,343 @@
+* 
+{
+    box-sizing: border-box;
+}
+
+body, html
+{
+    height: 100%;
+    background-color: purple;
+    margin: 0;
+}
+
+#Banner
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(./BSBanner2.jpg);
+    height: 35%;
+    width: 100%;
+    background-position: 25% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border: 5px solid black;
+}
+
+.NavBar ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    width: 99.95%;
+}
+  
+.NavBar li 
+{
+    float: left;
+}
+  
+.NavBar li a 
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.NavBar li a:hover:not(.active) 
+{   
+    background-color: #111;
+    color: white;
+}
+
+.NavBar .active 
+{
+    background-color: gold;
+    color: black;
+}
+
+#grid
+{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto; 
+    padding: 0;
+    font-size: 0; 
+    list-style: none;
+}
+
+#grid li 
+{
+    display: inline-block;
+    *display: inline;
+    width: 25%;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+        
+.gridCell 
+{
+    margin: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+        
+.gridImg 
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    transform: scale(1);
+    transition: all 1s;
+}
+
+.gridCell:hover .gridImg 
+{
+    transform: scale(1.05);
+}
+        
+.gridOverlay 
+{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: gold no-repeat center 20%;
+    background-size: 50px 50px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: all 0.6s;
+    pointer-events: none;
+}
+
+.gridCell:hover .gridOverlay 
+{
+    opacity:0.8;
+}
+
+.gridText 
+{
+    display: block;
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal!important;
+    top: 50%;
+    color:black;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translateY(-20px);
+    transition: all .3s;
+    pointer-events: none;
+}
+
+.gridCell:hover .gridText 
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (max-width: 9000px) 
+{
+    #grid li 
+    {
+        width: 25%;
+    }
+}
+
+@media (max-width: 1000px)
+{
+    .gridText
+    {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 700px)
+{
+    #grid li 
+    {
+        width: 33.33%;
+    }
+
+    .gridText
+    {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 550px) 
+{
+    #grid li 
+    {
+        width: 50%;
+    }
+
+    .gridText
+    {
+        font-size: 10px;
+    }
+}
+
+/* Modal */
+.modal 
+{
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+  
+.modal-content 
+{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content:hover
+{
+    opacity: 0.8;
+    cursor: pointer;;
+}
+
+.modal-content:hover ~ .modalOverlay
+{
+    opacity: 1;
+}
+
+.modalOverlay
+{
+    position: absolute;
+    transform: translate(0, -75%);
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    content: url("Play.png");
+    background-size: 50px 50px;
+    width: 75px;
+    height: 75px;
+    max-width: 700px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.playButton 
+{
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+  
+    border-color: transparent transparent transparent white;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+
+    opacity: 0;
+    position: absolute center;
+    
+    padding: 0;
+    pointer-events: none;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+
+    top: 50px;
+}
+
+#title
+{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    padding: 15px 0;
+    height: 50px;
+    font-size: 24px;
+}
+
+#desc
+{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    padding: 5x 0;
+    height: 50px;
+    font-size: 16px;
+}
+  
+.modal-content, #title, #desc
+{
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom 
+{
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+  
+.close 
+{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover, .close:focus 
+{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+@media only screen and (max-width: 700px)
+{
+    .modal-content 
+    {
+        width: 100%;
+    }
+}
