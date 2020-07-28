@@ -3,6 +3,7 @@
 
 <head>
     <title>BBoiz</title>
+    <link rel="shortcut icon" type="image/x-icon" href="BBIcon.jpg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="myScript.js"></script>
@@ -15,6 +16,7 @@
         <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a class="active" href="./MovieCollection.html">Movie Collection</a></li>
+            <li><a href="./SoccerComp.html">Soccer Compilations</a></li>
         </ul>
     </div>
 
@@ -35,27 +37,76 @@
         </li>
         <li>
             <div class="gridCell">
-                <img class="gridImg" src="./CCBloopers.png" onclick="openModal(this);" alt="Captain Cosine Bloopers" data-cap="Bloopers" data-movid="sJXS3pongAw">
+                <img class="gridImg" src="./CCBloopers.png" onclick="openModal(this);" alt="Captain Cosine Bloopers" data-cap="Bloopers" data-movid="udf4OdiVtvU">
                 <span class="gridOverlay"></span>
                 <span class="gridText">Captain Cosine Bloopers</span>
             </div>
         </li>
         <li>
             <div class="gridCell">
-                <img class="gridImg" src="./Trailer.jpg" onclick="openModal(this);" alt="BBoiz Trailer" data-cap="Trailer" data-movid="sJXS3pongAw">
+                <img class="gridImg" src="./ToT.jpg" onclick="openModal(this);" alt="The Temple of Terror" data-cap="Dylan the Explorer" data-movid="uSuxc74_4NY">
                 <span class="gridOverlay"></span>
-                <span class="gridText">BBoiz Trailer</span>
+                <span class="gridText">The Temple of Terror</span>
             </div>
         </li>
         <li>
             <div class="gridCell">
-                <img class="gridImg" src="./CapCosine.jpg" onclick="openModal(this);" alt="The Adventures of Captain Cosine" data-cap="Captain Cosine" data-movid="sJXS3pongAw">
+                <img class="gridImg" src="./Trailer.jpg" onclick="openModal(this);" alt="The Ghosts Revenge" data-cap="Dylan the Explorer" data-movid="n7UNRgpFopM">
                 <span class="gridOverlay"></span>
-                <span class="gridText">The Adventures of Captain Cosine</span>
+                <span class="gridText">The Ghosts Revenge</span>
+            </div>
+        </li>
+        <li>
+            <div class="gridCell">
+                <img class="gridImg" src="./SB.jpg" onclick="openModal(this);" alt="Sherlock Bones" data-cap="Sherlock Bones investigates a murder" data-movid="XUkjcnHN_Tc">
+                <span class="gridOverlay"></span>
+                <span class="gridText">Sherlock Bones</span>
+            </div>
+        </li>
+        <li>
+            <div class="gridCell">
+                <img class="gridImg" src="./TAR.jpg" onclick="openModal(this);" alt="The Abandonded Ruins" data-cap="Adventure for pirate treasure" data-movid="zv4v1YG3ihE">
+                <span class="gridOverlay"></span>
+                <span class="gridText">The Abandonded Ruins</span>
+            </div>
+        </li>
+        <li>
+            <div class="gridCell">
+                <img class="gridImg" src="./BB.jpg" onclick="openModal(this);" alt="Bandit Brothers" data-cap="The infamous Bandit Brothers" data-movid="BBNFvwd5xeE">
+                <span class="gridOverlay"></span>
+                <span class="gridText">Bandit Brothers</span>
+            </div>
+        </li>
+        <li>
+            <div class="gridCell">
+                <img class="gridImg" src="./LoU.jpg" onclick="openModal(this);" alt="Land of the Undead" data-cap="The infamous Bandit Brothers" data-movid="DqgpIO-GIIY">
+                <span class="gridOverlay"></span>
+                <span class="gridText">Land of the Undead</span>
+            </div>
+        </li>
+        <li>
+            <div class="gridCell">
+                <img class="gridImg" src="./TP.jpg" onclick="openModal(this);" alt="The Physcopath" data-cap="Horror short" data-movid="YWwQ9BasP50">
+                <span class="gridOverlay"></span>
+                <span class="gridText">The Physcopath</span>
+            </div>
+        </li>
+        <li>
+            <div class="gridCell">
+                <img class="gridImg" src="./Polt.jpg" onclick="openModal(this);" alt="The Poltergeist" data-cap="A ragtag team of ghost busters" data-movid="CQ0TDDAL1wE">
+                <span class="gridOverlay"></span>
+                <span class="gridText">The Poltergeist</span>
+            </div>
+        </li>
+        <li>
+            <div class="gridCell">
+                <img class="gridImg" src="./PBoTS.jpg" onclick="openModal(this);" alt="The Poltergeist Bloopers" data-cap="Bloopers" data-movid="YVoO3eZYEWY">
+                <span class="gridOverlay"></span>
+                <span class="gridText">The Poltergeist Bloopers</span>
             </div>
         </li>
     </ul>
-
+    
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <span onclick="this.parentElement.style.display='none'" class="close">&times;</span>
@@ -63,7 +114,5 @@
         <span class="modalOverlay"></span>
         <div id="title"></div>
         <div id="desc"></div>
-        <div class="playButton"></div>
     </div>
-
 </body>
