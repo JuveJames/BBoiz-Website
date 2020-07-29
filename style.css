@@ -7,7 +7,9 @@ body, html
 {
     height: 100%;
     background-color: purple;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
 #Banner
@@ -20,6 +22,7 @@ body, html
     background-size: cover;
     position: relative;
     border: 5px solid black;
+    min-height: 10%;
 }
 
 .NavBar ul 
@@ -29,7 +32,8 @@ body, html
     padding: 0;
     overflow: hidden;
     top: 0;
-    width: 99.95%;
+    width: 100%;
+    position: relative;
 }
   
 .NavBar li 
@@ -223,8 +227,11 @@ body, html
 
 .modal-content:hover
 {
-    opacity: 0.8;
-    cursor: pointer;;
+    -webkit-filter: brightness(70%);
+    -moz-filter: brightness(70%);
+    filter: url(#brightness); 
+    filter: brightness(70%);
+    cursor: pointer;
 }
 
 .modal-content:hover ~ .modalOverlay
@@ -321,13 +328,39 @@ body, html
 {
     margin: 0 auto;
     max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
-.theaterContainter
+.theaterContainer
 {
     margin: 12px;
     box-shadow: 0 0 6px rgba(0,0,0,0.3);
     display: block;
     position: relative center;
     overflow: hidden;
+    width: auto;
+    height: 90%;
+}
+
+#return
+{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: gold;
+    width: 25%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+}
+
+#return:hover
+{
+    background-color: black;
+    color: white;
 }
