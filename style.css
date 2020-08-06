@@ -239,6 +239,18 @@ body, html
         display: block;
         text-align: left;
     }
+
+    .NavBar.mobile li a:not(.active) 
+    {   
+        background-color: grey;
+        color: white;
+    }
+
+    .NavBar.mobile li a:hover:not(.active) 
+    {   
+        background-color: #111;
+        color: white;
+    }
 }
 
 /* Modal */
