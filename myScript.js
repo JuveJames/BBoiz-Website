@@ -4,6 +4,7 @@ function openModal(imgs)
     var captionText = document.getElementById("title");
     var movieDesc = document.getElementById("desc");
     var modal = document.getElementById("myModal");
+ 
     modal.style.display = "block";
     modalImg.src = imgs.src;
     captionText.innerHTML = imgs.alt;
