@@ -15,9 +15,7 @@ function openModal(imgs)
 function playMovie(imgs)
 {
     var movieId = imgs.dataset.movid;
-
     url = './MovieTheater.html?movieid=' + encodeURIComponent(movieId);
-
     document.location.href = url;
 }
 
@@ -33,6 +31,23 @@ function loadMovie()
     }
 
     var movieURL = document.getElementById("theater");
-    movieURL.src = "https://www.youtube.com/embed/" + data.movieid;
-    
+    movieURL.src = "https://www.youtube.com/embed/" + data.movieid;  
 }
+
+function returnBack() 
+{
+    window.history.back()
+}
+
+function mobileMenu() 
+{
+    var x = document.getElementById("myNav");
+    if (x.className === "NavBar") 
+    {
+      x.className += " mobile";
+    } 
+    else 
+    {
+      x.className = "NavBar";
+    }
+  }

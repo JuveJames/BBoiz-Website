@@ -11,11 +11,12 @@
 
 <body>
     <div id="Banner">
-        <div class="NavBar">
+        <div class="NavBar" id="myNav">
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./MovieCollection.html">Movie Collection</a></li>
                 <li><a class="active" href="./SoccerComp.html">Soccer Compilations</a></li>
+                <li><a href="javascript:void(0);" style="font-size:15px;" class="mobileIcon" onclick="mobileMenu()">&#9776;</a></li>
             </ul>
         </div>
     </div>
@@ -24,14 +25,14 @@
     <ul id="grid">
         <li>
             <div class="gridCell">
-                <img class="gridImg" src="./SC.jpg" onclick="openModal(this);" alt="Soccer Compilation" data-cap="Soccer Comp" data-movid="acTMu_vC4yo">
+                <img class="gridImg" src="./SC.jpg" onclick="openModal(this);" alt="Soccer Compilation" data-cap="Soccer compilation starring Kosta and Andreja." data-movid="acTMu_vC4yo">
                 <span class="gridOverlay"></span>
                 <span class="gridText">Soccer Compilation</span>
             </div>
         </li>
         <li>
             <div class="gridCell">
-                <img class="gridImg" src="./SocBloops.jpg" onclick="openModal(this);" alt="Soccer Bloopers" data-cap="Soccer Fails" data-movid="fkbooTbRwpc">
+                <img class="gridImg" src="./SocBloops.jpg" onclick="openModal(this);" alt="Soccer Bloopers" data-cap="A recreation of numerous real backyard soccer bloopers." data-movid="fkbooTbRwpc">
                 <span class="gridOverlay"></span>
                 <span class="gridText">Soccer Bloopers</span>
             </div>
@@ -41,7 +42,7 @@
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <span onclick="this.parentElement.style.display='none'" class="close">&times;</span>
-        <img class="modal-content" id="modalImg" onclick="playMovie(this);">
+        <img class="modal-content" id="modalImg" src="" alt="" onclick="playMovie(this);">
         <span class="modalOverlay"></span>
         <div id="title"></div>
         <div id="desc"></div>
