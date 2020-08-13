@@ -51,4 +51,4 @@ function mobileMenu()
     {
       x.className = "NavBar";
     }
-  }
+}
