@@ -1,8 +1,10 @@
+/* Default style */
 * 
 {
     box-sizing: border-box;
 }
 
+/* Main body style */
 body, html
 {
     height: 100%;
@@ -12,6 +14,7 @@ body, html
     border: 0px;
 }
 
+/* Banner style */
 #Banner
 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(./Images/BSBanner2.jpg);
@@ -25,6 +28,7 @@ body, html
     min-height: 10%;
 }
 
+/* Navigation menu style */
 .NavBar ul 
 {
     list-style-type: none;
@@ -36,11 +40,13 @@ body, html
     position: relative;
 }
   
+/* Navigation menu item style */
 .NavBar li 
 {
     float: left;
 }
   
+/* Navigation menu text style */
 .NavBar li a 
 {
     display: block;
@@ -50,23 +56,27 @@ body, html
     text-decoration: none;
 }
   
+/* Navigation menu when hovered style */
 .NavBar li a:hover:not(.active) 
 {   
     background-color: #111;
     color: white;
 }
 
+/* Navigation menu when selected style */
 .NavBar .active 
 {
     background-color: gold;
     color: black;
 }
 
+/* Navigation menu when in mobile mode style */
 .NavBar li .mobileIcon
 {
     display: none;
 }
 
+/* Grid style */
 #grid
 {
     max-width: 100%;
@@ -77,6 +87,7 @@ body, html
     list-style: none;
 }
 
+/* Grid item style */
 #grid li 
 {
     display: inline-block;
@@ -87,7 +98,8 @@ body, html
     margin: 0;
     padding: 0;
 }
-        
+  
+/* Grid cell style */
 .gridCell 
 {
     margin: 12px;
@@ -97,7 +109,8 @@ body, html
     overflow: hidden;
     cursor: pointer;
 }
-        
+       
+/* Grid thumbnail style */
 .gridImg 
 {
     display: block;
@@ -108,11 +121,13 @@ body, html
     transition: all 1s;
 }
 
+/* Grid thumbnail when hovered over style */
 .gridCell:hover .gridImg 
 {
     transform: scale(1.05);
 }
-        
+ 
+/* Grid overlay style */
 .gridOverlay 
 {
     position: absolute;
@@ -130,11 +145,13 @@ body, html
     pointer-events: none;
 }
 
+/* Grid overlay when hovered over style */
 .gridCell:hover .gridOverlay 
 {
     opacity:0.8;
 }
 
+/* Grid text style */
 .gridText 
 {
     display: block;
@@ -158,12 +175,14 @@ body, html
     pointer-events: none;
 }
 
+/* Grid cell text when hovered over style */
 .gridCell:hover .gridText 
 {
     transform: translateY(0px);
     opacity: 1;
 }
 
+/* Check for screen size to ensure style over different devices */
 @media (max-width: 9000px) 
 {
     #grid li 
@@ -193,6 +212,7 @@ body, html
     }
 }
 
+/* Mobile cutoff */
 @media (max-width: 600px) 
 {
     #grid li 
@@ -253,7 +273,7 @@ body, html
     }
 }
 
-/* Modal */
+/* Modal style */
 .modal 
 {
     display: none; 
@@ -269,6 +289,7 @@ body, html
     background-color: rgba(0,0,0,0.9); 
 }
   
+/* Modal content style */
 .modal-content 
 {
     margin: auto;
@@ -277,6 +298,7 @@ body, html
     max-width: 700px;
 }
 
+/* Modal content when hovered over style */
 .modal-content:hover
 {
     -webkit-filter: brightness(70%);
@@ -286,11 +308,13 @@ body, html
     cursor: pointer;
 }
 
+/* Modal overlay when hovered over style */
 .modal-content:hover ~ .modalOverlay
 {
     opacity: 1;
 }
 
+/* Modal overlay style*/
 .modalOverlay
 {
     margin: 0;
@@ -309,6 +333,7 @@ body, html
     pointer-events: none;
 }
 
+/* Movie title in modal style */
 #title
 {
     margin: auto;
@@ -323,6 +348,7 @@ body, html
     margin-bottom: 30px;
 }
 
+/* Movie description in modal style */
 #desc
 {
     margin: auto;
@@ -336,6 +362,7 @@ body, html
     font-size: 16px;
 }
   
+/* Movie title and desc in modal animation*/
 .modal-content, #title, #desc
 {
     animation-name: zoom;
@@ -347,7 +374,8 @@ body, html
     from {transform:scale(0)}
     to {transform:scale(1)}
 }
-  
+ 
+/* Close modal */
 .close 
 {
     position: absolute;
@@ -359,6 +387,7 @@ body, html
     transition: 0.3s;
 }
   
+/* Close button when hovered over style */
 .close:hover, .close:focus 
 {
     color: #bbb;
@@ -374,6 +403,7 @@ body, html
     }
 }
 
+/* Movie theater style */
 #theater
 {
     margin: 0 auto;
@@ -383,6 +413,7 @@ body, html
     border: 0;
 }
 
+/* Movie theater container style */
 .theaterContainer
 {
     margin: 12px;
@@ -394,6 +425,7 @@ body, html
     height: 90%;
 }
 
+/* Back button style */
 #return
 {
     display: block;
@@ -410,6 +442,7 @@ body, html
     bottom: 0;
 }
 
+/* Back button on hover style */
 #return:hover
 {
     background-color: black;
@@ -417,6 +450,7 @@ body, html
     cursor: pointer;
 }
 
+/* Home trailer style */
 #homeVid
 {
     margin: 0 auto;
@@ -426,6 +460,7 @@ body, html
     border: 0;
 }
 
+/* Video player style */
 .video
 {
     margin: 0 auto;
@@ -437,6 +472,7 @@ body, html
     height: 50%;
 }
 
+/* Header text style */
 h1
 {
     text-align: center;

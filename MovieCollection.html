@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
+<!-- 
+    Author:       James Baker
+    Last Update:  12/20/20
+    Description:  Web page that shows collection of movies in a grid layout.
+ -->
+
+<!-- Header Information -->
 <head>
     <title>BBoiz</title>
     <link rel="shortcut icon" type="image/x-icon" href="./Images/BBIcon.jpg"/>
@@ -9,6 +16,7 @@
     <script src="myScript.js"></script>
 </head>
 
+<!-- Banner with navigation menu -->
 <body>
     <div id="Banner">
         <div class="NavBar" id="myNav">
@@ -21,7 +29,7 @@
         </div>
     </div>
     
-
+    <!-- Grid layout containing cells with thumbnails of every movie -->
     <ul id="grid">
         <li>
             <div class="gridCell">
@@ -109,7 +117,7 @@
         </li>
     </ul>
     
-    <!-- The Modal -->
+    <!-- Modal that presents the selected movies information and a play button -->
     <div id="myModal" class="modal">
         <span onclick="this.parentElement.style.display='none'" class="close">&times;</span>
         <img class="modal-content" id="modalImg" src="" alt="" onclick="playMovie(this);">
